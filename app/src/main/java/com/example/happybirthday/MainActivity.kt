@@ -24,6 +24,10 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.ui.layout.ContentScale
 
+private const val HAPPY_BIRTHDAY_Text = "Happy Birthday Sam!"
+
+private const val signature_Text = "From Emma"
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +38,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    GreetingImage(message = "Happy Birthday!", from = "From Android")
+                    GreetingImage(message = HAPPY_BIRTHDAY_Text, from = signature_Text)
                 }
             }
         }
@@ -87,6 +91,6 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
 @Composable
 fun BirthdayCardPreview() {
     HappyBirthdayTheme {
-        GreetingImage(message = "Happy Birthday Sam!", from = "From Emma")
+        GreetingImage(message = HAPPY_BIRTHDAY_Text, from = signature_Text)
     }
 }
